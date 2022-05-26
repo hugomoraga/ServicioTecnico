@@ -1,16 +1,19 @@
 package cl.talentodigital.dao;
-
+import cl.talentodigital.modelo.Cliente;
 import java.util.List;
 
-public interface IClienteDao<Cliente> {
+public interface IClienteDao {
 	
     
     List<Cliente> obtenerClientes();
     
-    boolean guardar(Cliente cliente);
+    Cliente obtenerCliente(int clienteId);
     
-    boolean actualizar(Cliente cliente, String[] params);
+    boolean agregarCliente(Cliente cliente);
+    
+    boolean actualizar(Cliente cliente);
     
     boolean eliminar(Cliente cliente);
+
 
 }
